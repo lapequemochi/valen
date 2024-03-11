@@ -170,6 +170,7 @@ class Empresa:
     # Puntos de Extensi�n
     ----------------------------------------------------------------'''
     
+   
     # M�todo para la extensi�n 1.
     # @return Respuesta 1.
     def metodo1(self):
@@ -179,3 +180,14 @@ class Empresa:
     # @return Respuesta 2.
     def metodo2(self):
         return "Respuesta 2"
+    """----------------------
+    # Atributos
+    -----------------"""
+    EstratoAlto = 0
+    EstratoMedio = 0
+    Estratobajo = 0
+    
+    """------------------------
+    #1= EstratoAlto 2=EstratoMedio 3=Estratobajo
+    --------------------------"""
+    
