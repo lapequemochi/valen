@@ -180,4 +180,10 @@ class Empresa:
     # @return Respuesta 2.
     def metodo2(self):
         return "Respuesta 2"
- 
+    
+    def AplicarDescuentoATodos(self):
+        self.linea1.Descuento
+        self.linea2.Descuento
+        self.linea3.Descuento
+        
+    def Descuen

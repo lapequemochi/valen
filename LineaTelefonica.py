@@ -12,6 +12,12 @@ class LineaTelefonica:
     # Costo total de las llamadas
     costoLlamadas=""
     
+    #Estratos 
+    Estrato=0
+    
+    #Descuento del 0.0 al 25.5
+    Descuento=0.25
+    
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -92,3 +98,12 @@ class LineaTelefonica:
         self.numeroMinutos += pMinutos
         # Suma el costo (costo por minuto: 999 pesos)
         self.costoLlamadas += pMinutos * 999
+        
+    def DescuentoLineaTelefonica (self):
+        LineaTelefonica.Descuento
+
+    def darDescuento(self):
+        return self.Descuento / 100
+    
+    
+    
