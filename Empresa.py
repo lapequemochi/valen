@@ -6,11 +6,11 @@ class Empresa:
     ----------------------------------------------------------------'''
     
     # Línea telefónica número 1.
-    linea1=""
+    linea1=0
     # Línea telefónica número 2.
-    linea2=""
+    linea2=0
     # Línea telefónica número 3.
-    linea3=""
+    linea3=0
     
     '''----------------------------------------------------------------
     # Metodos
@@ -47,7 +47,7 @@ class Empresa:
     def darTotalNumeroLlamadas(self):
         # TODO Parte3 PuntoE: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo
-        return self.linea1.numeroLlamadas()+self.linea2.numeroLlamadas()+self.linea3.numeroLlamadas()
+        return self.linea1.darNumeroLlamadas()+self.linea2.darNumeroLlamadas()+self.linea3.darNumeroLlamadas()
 
     '''
 	    # Retorna el total de minutos consumidos.
@@ -56,7 +56,7 @@ class Empresa:
     def darTotalMinutos(self):
         # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo
-        return self.linea1.numeroMinutos()+self.linea2.numeroMinutos()+self.linea3.numeroMinutos()
+        return self.linea1.darNumeroMinutos()+self.linea2.darNumeroMinutos()+self.linea3.darNumeroMinutos()
 
     '''
 	    # Retorna el costo total de las llamadas realizadas.
@@ -65,7 +65,7 @@ class Empresa:
     def darTotalCostoLlamadas(self):
         # TODO Parte3 PuntoG: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo
-        return self.linea1.costoLlamadas()+self.linea2.costoLlamadas()+self.linea3.costoLlamadas()
+        return self.linea1.darCostoLlamadas()+self.linea2.darCostoLlamadas()+self.linea3.darCostoLlamadas()
 
     '''
         # Retorna el costo promedio de un minuto, seg�n los minutos consumidos. <br>
@@ -73,7 +73,8 @@ class Empresa:
     '''
     def darCostoPromedioMinuto(self):
         # TODO Parte3 PuntoH: Completar el m�todo seg�n la documentaci�n dada.
-        nCostoPromedioMinuto = self.darTotalCostoLlamadas / self.darTotalNumeroLlamadas
+        nCostoPromedioMinuto=self.darTotalCostoLlamadas()/self.darTotalMinutos()
+        return nCostoPromedioMinuto
 
     '''
         # Agrega una llamada local a la l�nea telef�nica 1 <br>

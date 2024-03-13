@@ -4,13 +4,13 @@ class LineaTelefonica:
     ----------------------------------------------------------------'''
     
     # Numero de llamadas realizadas
-    numeroLlamadas=""
+    numeroLlamadas=0
     
     # Numero de minutos consumidos
-    numeroMinutos=""
+    numeroMinutos=0
     
     # Costo total de las llamadas
-    costoLlamadas=""
+    costoLlamadas=0
     
     #Estratos 
     Estrato=0
@@ -25,7 +25,7 @@ class LineaTelefonica:
     # Inicializar el número de llamadas, número de minutos y costo de llamadas en 0.
     def __init__(self):
         # TODO Parte2 PuntoA: Completar el método según la documentación dada.
-        #Aqui va el codigo
+        # Aqui va el codigo
         numeroLlamadas =0
         numeroMinutos= 0
         costoLlamadas=0
@@ -51,9 +51,10 @@ class LineaTelefonica:
     # post: El número de llamadas, número de minutos y costo de llamadas son 0.
     def reiniciar(self):
         # TODO Parte2 PuntoE: Completar el método según la documentación dada.
-        LineaTelefonica = 0
-
-
+        self.numeroLlamadas=0
+        self.numeroMinutos=0
+        self.costoLlamadas=0
+    
     # Agrega una llamada local a la línea telefónica
     # post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 35 ).
     # :param pMinutos Número de minutos de la llamada. pMinutos >0.
@@ -80,9 +81,9 @@ class LineaTelefonica:
         # Una llamada más
         self.numeroLlamadas += 1
         # Suma los minutos consumidos
-        self.numeroMinutos += pMinutos
+        self.numeroMinutos += int(pMinutos)
         # Suma el costo (costo por minuto: 380 pesos)
-        self.costoLlamadas += pMinutos * 380
+        self.costoLlamadas += int(pMinutos) * 380
 
     '''
         Agrega una llamada a celular a la lÍnea telefónica

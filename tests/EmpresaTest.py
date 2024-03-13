@@ -1,4 +1,4 @@
-from LineasTelefonicas.Empresa import Empresa
+from Empresa import Empresa
 
 class TestEmpresa:
 

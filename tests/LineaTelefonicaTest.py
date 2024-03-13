@@ -1,4 +1,4 @@
-from LineasTelefonicas.LineaTelefonica import LineaTelefonica
+from LineaTelefonica import LineaTelefonica
 
 class TestLineaTelefonica:
 
