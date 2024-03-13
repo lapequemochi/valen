@@ -185,5 +185,3 @@ class Empresa:
         self.linea1.Descuento
         self.linea2.Descuento
         self.linea3.Descuento
-        
-    def Descuen
