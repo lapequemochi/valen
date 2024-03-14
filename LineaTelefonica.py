@@ -21,6 +21,12 @@ class LineaTelefonica:
     #Saldo desponible
     saldoDisponible =0
     
+    #Almacenar Total de segundos
+    totalSegundos=0
+    
+    #Almacenar costo de llamada
+    costoDolares=0
+    
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -32,6 +38,8 @@ class LineaTelefonica:
         numeroLlamadas =0
         numeroMinutos= 0
         costoLlamadas=0
+        totalSegundos=0
+        costoDolares =0
 
     #Retorna el costo total de las llamadas realizadas.
     def darCostoLlamadas(self):
@@ -57,6 +65,8 @@ class LineaTelefonica:
         self.numeroLlamadas=0
         self.numeroMinutos=0
         self.costoLlamadas=0
+        self.costoDolares=0
+        self.totalSegundos=0
     
     # Agrega una llamada local a la línea telefónica
     # post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 35 ).
@@ -132,6 +142,12 @@ class LineaTelefonica:
         self.saldoDisponible -= costoLlamadas
         
     def motivarCliente(self, minuto):
-        cantidad = (minuto / 30) * 1000
-        self.saldoDisponible += cantidad
+        if self.numeroMinutos >=30:
+            self.saldoDisponible += 1000
+    
+    def ConvertirPesosADolares (self):
+        convertir = float(self.costoLlamadas/3100)
+        self.costoDolares = convertir
+        return convertir
         
+    
