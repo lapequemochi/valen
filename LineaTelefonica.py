@@ -18,6 +18,9 @@ class LineaTelefonica:
     #Descuento del 0.0 al 25.5
     Descuento=0.25
     
+    #Saldo desponible
+    saldoDisponible =0
+    
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -101,10 +104,34 @@ class LineaTelefonica:
         self.costoLlamadas += pMinutos * 999
         
     def DescuentoLineaTelefonica (self):
-        LineaTelefonica.Descuento
+        return self.Descuento
 
-    def darDescuento(self):
-        return self.Descuento / 100
+    def darAplicarDescuento(self):
+        descuento = (self.darCostoLlamadas() * self.Descuento)/100
+        return descuento
     
+    def SaldoDisponible(self):
+        descuentoAplicado = self.darAplicarDescuento()
+        saldoDisponible = self.darCostoLlamadas() - descuentoAplicado
+        return saldoDisponible
     
-    
+    def aumentarSaldo(self, valor):
+        self.saldoDisponible += valor
+        
+    def agregarLlamadaLocal(self, pMinutos):
+        # TODO Parte2 PuntoG: Completar el método según la documentación dada.
+        # Una llamada más
+        self.numeroLlamadas += 1
+        # Suma los minutos consumidos
+        self.numeroMinutos += pMinutos
+        # Suma el costo (costo por minuto: 35 pesos)
+        costoLlamadas += pMinutos * 35
+        # Actualizar el costo total de las llamadas
+        self.costoLlamadas += costoLlamadas
+        # Resta el costo de la llamada al saldo disponible
+        self.saldoDisponible -= costoLlamadas
+        
+    def motivarCliente(self, minuto):
+        cantidad = (minuto / 30) * 1000
+        self.saldoDisponible += cantidad
+        

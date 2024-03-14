@@ -174,15 +174,15 @@ class Empresa:
    
     # M�todo para la extensi�n 1.
     # @return Respuesta 1.
-    def metodo1(self):
-        return "Respuesta 1"
+    def darDescuentoATodos(self):
+        Descuento1= (self.linea1.costoLlamadas * self.linea1.descuento)/100
+        Descuento2= (self.linea2.costoLlamadas * self.linea2.descuento)/100
+        Descuento3= (self.linea3.costoLlamadas * self.linea3.descuento)/100
+        return  Descuento1 +Descuento2 + Descuento3
 
     # M�todo para la extensi�n 2.
     # @return Respuesta 2.
     def metodo2(self):
         return "Respuesta 2"
+
     
-    def AplicarDescuentoATodos(self):
-        self.linea1.Descuento
-        self.linea2.Descuento
-        self.linea3.Descuento
