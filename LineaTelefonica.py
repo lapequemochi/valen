@@ -103,8 +103,9 @@ class LineaTelefonica:
         # Suma el costo (costo por minuto: 999 pesos)
         self.costoLlamadas += pMinutos * 999
         
-    def DescuentoLineaTelefonica (self):
-        return self.Descuento
+    def darDescuentoLineaTelefonica (self):
+        self.Descuento = self.numeroLlamadas + self.costoLlamadas + self.numeroMinutos
+        return self.darDescuentoLineaTelefonica
 
     def darAplicarDescuento(self):
         descuento = (self.darCostoLlamadas() * self.Descuento)/100
