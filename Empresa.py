@@ -167,22 +167,11 @@ class Empresa:
         self.linea2.reiniciar()
         self.linea3.reiniciar()
 
-    '''----------------------------------------------------------------
-    # Puntos de Extensi�n
-    ----------------------------------------------------------------'''
-    
-   
-    # M�todo para la extensi�n 1.
-    # @return Respuesta 1.
     def darDescuentoATodos(self):
         descuento1= (self.linea1.costoLlamadas * self.linea1.descuento)/100
         descuento2= (self.linea2.costoLlamadas * self.linea2.descuento)/100
         descuento3= (self.linea3.costoLlamadas * self.linea3.descuento)/100
         return  descuento1 + descuento2 + descuento3
     
-    # M�todo para la extensi�n 2.
-    # @return Respuesta 2.
-    def metodo2(self):
-        return "Respuesta 2"
 
     
