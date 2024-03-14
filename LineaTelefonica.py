@@ -16,7 +16,7 @@ class LineaTelefonica:
     Estrato=0
     
     #Descuento del 0.0 al 25.5
-    Descuento=0.25
+    descuento=0.25
     
     #Saldo desponible
     saldoDisponible =0
@@ -104,11 +104,10 @@ class LineaTelefonica:
         self.costoLlamadas += pMinutos * 999
         
     def darDescuentoLineaTelefonica (self):
-        self.Descuento = self.numeroLlamadas + self.costoLlamadas + self.numeroMinutos
-        return self.darDescuentoLineaTelefonica
+        return self.descuento
 
     def darAplicarDescuento(self):
-        descuento = (self.darCostoLlamadas() * self.Descuento)/100
+        descuento = (self.darCostoLlamadas() * self.descuento)/100
         return descuento
     
     def SaldoDisponible(self):
