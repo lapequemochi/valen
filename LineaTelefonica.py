@@ -13,7 +13,7 @@ class LineaTelefonica:
     costoLlamadas=0
     
     #Estratos 
-    Estrato=0
+    estrato=0
     
     #Descuento del 0.0 al 25.5
     descuento=0.25
