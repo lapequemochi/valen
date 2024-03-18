@@ -27,6 +27,12 @@ class LineaTelefonica:
     #Almacenar costo de llamada
     costoDolares=0
     
+    #Cantidad de minutos de llamada a celular
+    minutosCelular=0
+    
+    #Cantidad de minutos de llamadas a celular 
+    costoLlamadaCelular=0
+    
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -40,6 +46,8 @@ class LineaTelefonica:
         costoLlamadas=0
         totalSegundos=0
         costoDolares =0
+        minutosCelular=0
+        costoLlamadaCelular=0
 
     #Retorna el costo total de las llamadas realizadas.
     def darCostoLlamadas(self):
@@ -57,6 +65,16 @@ class LineaTelefonica:
     def darNumeroMinutos(self):
         # TODO Parte2 PuntoD: Completar el método según la documentación dada.
         return self.numeroMinutos
+    
+    def darMinutosCelular(self):
+        # TODO Parte2 PuntoB: Completar el método según la documentación dada.
+        #Aqui va el codigo 
+        return self.minutosCelular
+    
+    def darCostoLlamadaCelular(self):
+        # TODO Parte2 PuntoB: Completar el método según la documentación dada.
+        #Aqui va el codigo 
+        return self.costoLlamadaCelular
 
     # Reinicia la línea telefónica, dejando todos sus valores en cero.
     # post: El número de llamadas, número de minutos y costo de llamadas son 0.
@@ -67,6 +85,8 @@ class LineaTelefonica:
         self.costoLlamadas=0
         self.costoDolares=0
         self.totalSegundos=0
+        self.minutosCelular=0
+        self.costoLlamadaCelular=0
     
     # Agrega una llamada local a la línea telefónica
     # post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 35 ).
@@ -109,9 +129,13 @@ class LineaTelefonica:
         # Una llamada más
         self.numeroLlamadas += 1
         # Suma los minutos consumidos
-        self.numeroMinutos += pMinutos
+        self.numeroMinutos += self.minutosCelular
         # Suma el costo (costo por minuto: 999 pesos)
-        self.costoLlamadas += pMinutos * 999
+        self.costoLlamadaCelular += self.minutosCelular * 999
+        # Actualizar el costo total de las llamadas
+        self.costoLlamadaCelular+= self.costoLlamadaCelular
+        # Resta el costo de la llamada al saldo disponible
+        self.saldoDisponible -= self.costoLlamadaCelular
         
     def darDescuentoLineaTelefonica (self):
         return self.descuento
