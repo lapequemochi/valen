@@ -39,6 +39,9 @@ class Empresa:
         # // TODO Parte3 PuntoD: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo 
         return self.linea3
+    
+    def darTotalLlamadaCelular(self):
+        return "El total de minutos de celular es " + self.linea1.darMinutosCelular()+self.linea2.darMinutosCelular()+self.linea3.darMinutosCelular()
 
     '''
 	    # Retorna el n�mero total de llamadas realizadas.
@@ -58,6 +61,12 @@ class Empresa:
         #Aqui va el codigo
         return self.linea1.darNumeroMinutos()+self.linea2.darNumeroMinutos()+self.linea3.darNumeroMinutos()
 
+    def darCostoLlamadasCelular(self):
+        # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
+        #Aqui va el codigo
+        totalCostoLlamadasCelular =self.linea1.darCostoLlamadaCelular()+self.linea2.darCostoLlamadaCelular()+self.linea3.darCostoLlamadaCelular()
+        bono = totalCostoLlamadasCelular * 0.02
+        return "Valor del bono es" + bono
     '''
 	    # Retorna el costo total de las llamadas realizadas.
 	    # @return Costo total de las tres l�neas.
