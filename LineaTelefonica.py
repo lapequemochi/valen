@@ -48,6 +48,11 @@ class LineaTelefonica:
         self.costoDolares =0
         self.minutosCelular=0
         self.costoLlamadaCelular=0
+    
+    def darEstrato (self):
+        #Aqui va el codigo
+        return self.estrato
+    
 
     #Retorna el costo total de las llamadas realizadas.
     def darCostoLlamadas(self):
@@ -182,4 +187,6 @@ class LineaTelefonica:
         self.costoDolares = convertir
         return convertir
         
-    
+    def definirEstratoLinea1(self, pEstrato):
+        self.linea1(pEstrato)
+
