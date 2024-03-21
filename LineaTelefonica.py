@@ -190,3 +190,9 @@ class LineaTelefonica:
     def definirEstratoLinea1(self, pEstrato):
         self.linea1(pEstrato)
 
+    def darMinutosPorEstrato(self):
+        self.numeroMinutos * self.estratoLinea1
+        self.numeroMinutos * self.estratoLinea2
+        self.numeroMinutos * self.estratoLinea3
+    
+    

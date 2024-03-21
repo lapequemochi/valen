@@ -181,6 +181,27 @@ class Empresa:
         descuento2= (self.linea2.costoLlamadas * self.linea2.descuento)/100
         descuento3= (self.linea3.costoLlamadas * self.linea3.descuento)/100
         return  descuento1 + descuento2 + descuento3
-    
+ 
+    def darEstratoLinea1(self):
+        estratoLinea1 = self.linea1.estrato2
+        return estratoLinea1
+    def darEstratoLinea2(self):
+        estratolinea2 = self.linea2.estrato5
+        return estratolinea2
+    def darEstratoLinea3(self):
+        estratolinea3 = self.linea3.estrato6
+        return estratolinea3
+ 
+    def darTotalMinutosPorEstrato(self):
+        minutosConsumidos1= self.darEstratoLinea1 * self.numeroMinutos
+        minutosConsumidos2= self.darEstratoLinea2 * self.numeroMinutos
+        minutosConsumidos3= self.darEstratoLinea3 * self.numeroMinutos
+        return  minutosConsumidos1 + minutosConsumidos2 + minutosConsumidos3
+   
+    def Metodo1 (self):
+        # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
+        #Aqui va el codigo
+        total = self.darTotalMinutosPorEstrato
+        return total
 
     
