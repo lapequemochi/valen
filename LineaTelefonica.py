@@ -191,8 +191,10 @@ class LineaTelefonica:
         self.linea1(pEstrato)
 
     def darMinutosPorEstrato(self):
-        self.numeroMinutos * self.linea1.estrato
-        self.numeroMinutos * self.linea2.estrato
-        self.numeroMinutos * self.linea3.estrato
+        self.linea1.numeroMinutos * self.linea1.estrato
+        self.linea2.numeroMinutos * self.linea2.estrato
+        self.linea3.numeroMinutos * self.linea3.estrato
+        
+        
     
-    
+        
