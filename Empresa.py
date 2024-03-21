@@ -56,15 +56,15 @@ class Empresa:
 	    # Retorna el total de minutos consumidos.
 	    # @return Total de minutos de las tres l�neas.
 	'''
-    def darTotalMinutos(self):
+    def Metodo1 (self):
         # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo
-        return self.linea1.darNumeroMinutos()+self.linea2.darNumeroMinutos()+self.linea3.darNumeroMinutos()
+        return self.linea1.Consultarminutoscelular()+self.linea2.Consultarminutoscelular()+self.linea3.Consultarminutoscelular()
 
-    def darCostoLlamadasCelular(self):
+    def Metodo2 (self):
         # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
         #Aqui va el codigo
-        totalCostoLlamadasCelular =self.linea1.darCostoLlamadaCelular()+self.linea2.darCostoLlamadaCelular()+self.linea3.darCostoLlamadaCelular()
+        totalCostoLlamadasCelular =self.linea1.ConsultarcostoLlamadaCelular()+self.linea2.ConsultarcostoLlamadaCelular()+self.linea3.ConsultarcostoLlamadaCelular()
         bono = totalCostoLlamadasCelular * 0.02
         return "Valor del bono es" + bono
     '''

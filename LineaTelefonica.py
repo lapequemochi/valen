@@ -41,19 +41,27 @@ class LineaTelefonica:
     def __init__(self):
         # TODO Parte2 PuntoA: Completar el método según la documentación dada.
         # Aqui va el codigo
-        numeroLlamadas =0
-        numeroMinutos= 0
-        costoLlamadas=0
-        totalSegundos=0
-        costoDolares =0
-        minutosCelular=0
-        costoLlamadaCelular=0
+        self.numeroLlamadas =0
+        self.numeroMinutos= 0
+        self.costoLlamadas=0
+        self.totalSegundos=0
+        self.costoDolares =0
+        self.minutosCelular=0
+        self.costoLlamadaCelular=0
 
     #Retorna el costo total de las llamadas realizadas.
     def darCostoLlamadas(self):
         # TODO Parte2 PuntoB: Completar el método según la documentación dada.
         #Aqui va el codigo 
         return self.costoLlamadas
+    
+    def Consultarminutoscelular(self):
+        consultarMinutosCelular = self.minutosCelular
+        return consultarMinutosCelular
+    
+    def ConsultarcostoLlamadaCelular(self):
+        consultarcostoLlamadaCelular = self.costoLlamadaCelular
+        return consultarcostoLlamadaCelular
         
     # Retorna el número de llamadas realizadas por esta línea.
     def darNumeroLlamadas(self):
@@ -123,7 +131,7 @@ class LineaTelefonica:
         post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 999 )
         :param pMinutos Número de minutos de la llamada. pMinutos >0.
     '''
-    def agregarLlamadaCelular(self, pMinutos):
+    def agregarLlamadaCelular(self):
         # TODO Parte2 PuntoG: Completar el método según la documentación dada.
            
         # Una llamada más
