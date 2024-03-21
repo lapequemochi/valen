@@ -178,7 +178,7 @@ class LineaTelefonica:
         # Resta el costo de la llamada al saldo disponible
         self.saldoDisponible -= costoLlamadas
         
-    def motivarCliente(self, minuto):
+    def motivarCliente(self):
         if self.numeroMinutos >=30:
             self.saldoDisponible += 1000
     
@@ -191,8 +191,8 @@ class LineaTelefonica:
         self.linea1(pEstrato)
 
     def darMinutosPorEstrato(self):
-        self.numeroMinutos * self.estratoLinea1
-        self.numeroMinutos * self.estratoLinea2
-        self.numeroMinutos * self.estratoLinea3
+        self.numeroMinutos * self.linea1.estrato
+        self.numeroMinutos * self.linea2.estrato
+        self.numeroMinutos * self.linea3.estrato
     
     

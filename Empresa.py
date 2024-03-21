@@ -182,20 +182,19 @@ class Empresa:
         descuento3= (self.linea3.costoLlamadas * self.linea3.descuento)/100
         return  descuento1 + descuento2 + descuento3
  
-    def darEstratoLinea1(self):
-        estratoLinea1 = self.linea1.estrato2
-        return estratoLinea1
-    def darEstratoLinea2(self):
-        estratolinea2 = self.linea2.estrato5
-        return estratolinea2
-    def darEstratoLinea3(self):
-        estratolinea3 = self.linea3.estrato6
-        return estratolinea3
+    def EstratoLinea1(self, pEstrato2):
+        self.linea1(pEstrato2)  
+        
+    def EstratoLinea2(self, pEstrato5):
+        self.linea2(pEstrato5)
+    
+    def EstratoLinea3(self, pEstrato6):
+        self.linea3(pEstrato6)
  
     def darTotalMinutosPorEstrato(self):
-        minutosConsumidos1= self.darEstratoLinea1 * self.numeroMinutos
-        minutosConsumidos2= self.darEstratoLinea2 * self.numeroMinutos
-        minutosConsumidos3= self.darEstratoLinea3 * self.numeroMinutos
+        minutosConsumidos1= self.EstratoLinea1* self.numeroMinutos
+        minutosConsumidos2= self.EstratoLinea2* self.numeroMinutos
+        minutosConsumidos3= self.EstratoLinea3 * self.numeroMinutos
         return  minutosConsumidos1 + minutosConsumidos2 + minutosConsumidos3
    
     def Metodo1 (self):
